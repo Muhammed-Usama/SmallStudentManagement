@@ -1,0 +1,26 @@
+/.phpunit.cache
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+touch .gitignore
+storage/*.json
+*.log
+*.tmp
+*/send-notification-1c643-firebase-adminsdk-5c9f7-f6225608d3.json
+/.vscode
+storage/send-notification-1c643-firebase-adminsdk-5c9f7-f6225608d3.jso

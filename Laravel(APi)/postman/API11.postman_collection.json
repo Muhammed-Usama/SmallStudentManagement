@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "004a2ae0-b86b-4613-9891-4c5f0a33b647",
+		"name": "API11",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36788269"
+	},
+	"item": [
+		{
+			"name": "Show",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/show",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"show"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/showid/11",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"showid",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "name_en",
+							"value": "Mohammed Usama",
+							"type": "text"
+						},
+						{
+							"key": "name_ar",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "address_en",
+							"value": "Menouf",
+							"type": "text"
+						},
+						{
+							"key": "address_ar",
+							"value": "منوف",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "0100006226",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/add",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "old_id",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "name_en",
+							"value": "usama",
+							"type": "text"
+						},
+						{
+							"key": "name_ar",
+							"value": "اسامه",
+							"type": "text"
+						},
+						{
+							"key": "address_en",
+							"value": "tala",
+							"type": "text"
+						},
+						{
+							"key": "address_ar",
+							"value": "تلا",
+							"type": "text"
+						},
+						{
+							"key": "mobile",
+							"value": "015886245",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/update",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000/api",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
